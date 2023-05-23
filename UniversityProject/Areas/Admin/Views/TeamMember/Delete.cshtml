@@ -1,0 +1,54 @@
+﻿@using UniversityProject.Models
+@model TeamMembers
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+             <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                    Delete Library Member 
+                  </p>
+                  
+                   <span>Name:</span>
+                   <span>@Model.Name</span>
+
+                   <br/>
+                       <br/>
+                        <span>StudentCardId:</span>
+                   <span>@Model.StudentCardId</span>
+
+                        <br />
+                        <br />
+
+                        <span>Create Date:</span>
+                        <span>@Model.CreateDate.ToString("dd/MM/yyyy")</span>
+
+                        <br />
+                        <br />
+
+                        <span>Create Date:</span>
+                        <span>@Model.DeadLine.ToString("dd/MM/yyyy")</span>
+
+
+                        <br />
+                        <br />
+                        <span>Book:</span>
+                        <span>@Model.BookName</span>
+
+                        <br />
+                        <br />
+
+                        <span>Status:</span>
+                        <span>@Model.Profession</span>
+
+                        <form method="post" asp-action="deletecomponent" asp-controller="teammember" asp-area="admin" asp-route-id="@Model.Id">
+                      <button onclick="confirm('Əminsinizmi?')" class="btn btn-danger">Silin</button>
+                   </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
